@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="./css/simple.css">  
+</head>
+<body>
+    <div id = "root"> </div>
+
+   <script>
+
+    const numberRandom = Math.floor(Math.random() * 100)+1 ;
+
+    const numberElement = document.createElement("h1") ;
+    
+     numberElement.id = "root"
+
+    numberElement.innerHTML = `Genrated Number : ${ numberRandom }`;
+    
+    const resultElement = document.createElement("h2") ;
+     
+    if(numberRandom%2 == 0){
+        resultElement.innerHTML = "The Number is Even!" ;
+    }else{                  
+     resultElement.innerHTML = "The Number is Odd!";
+    } 
+
+    const root = document.getElementById("root");
+
+    root.appendChild(numberElement);
+    root.appendChild(resultElement);
+    
+   </script> 
+      
+</body>
+</html>
